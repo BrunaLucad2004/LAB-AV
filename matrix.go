@@ -10,6 +10,8 @@ import (
 // Funcao para calcular cada linha
 func MultiplyRow(row []float64, scalar float64, wg *sync.WaitGroup) {
 
+	//As funcoes para tempo e ver as goroutines foram retiradas dos exemplos do professor
+
 	fmt.Printf("M.Work started at %s\n", time.Now().Format("15:04:05")) //inicia a contagem do tempo
 	fmt.Println("gorotines: ", runtime.NumGoroutine())                  //informa o numero de gorotines sendo executadas
 	time.Sleep(1 * time.Second)                                         //tempo para cada processo
@@ -58,7 +60,7 @@ func main() {
 	wg.Wait()
 
 	// Exibir a matriz
-	fmt.Println("   Matriz resultante:")
+	fmt.Println("Matrix:")
 	for i := 0; i < 13; i++ {
 		fmt.Println(matrix[i])
 	}
